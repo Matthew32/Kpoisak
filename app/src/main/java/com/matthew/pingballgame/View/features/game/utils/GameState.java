@@ -39,6 +39,7 @@ public class GameState {
     int limitPlayer2 = screenHeight;
     int limitPlayer1 = 0;
     private Bitmap win;
+    private int player = -1;
 
     public GameState(int width, int height, Bitmap win) {
         this.screenWidth = width;
@@ -83,6 +84,24 @@ public class GameState {
             _ballVelocityY *= -1;
     }
 
+    public void setMovement(int player) {
+        this.player = player;
+
+    }
+
+    public int movementPlayer(int x) {
+        if (player == 0) {
+            topBatX = x;
+        } else if (player == 1) {
+            bottombatx = x;
+        }
+
+        return 1;
+    }
+
+    public void disablePlayer() {
+        player = -1;
+    }
 
     public boolean keyPressed(int keyCode, KeyEvent msg) {
         if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) //left

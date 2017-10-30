@@ -51,4 +51,18 @@ public class GameThread extends Thread {
     public GameState getGameState() {
         return _state;
     }
+
+    public void movePlayer(int x) {
+        _state.movementPlayer(x);
+    }
+    public void setPlayerDisabled(){
+        _state.disablePlayer();
+    }
+    public void setMovement(int x, int y) {
+        if (/*x == _state.topBatX &&*/ y <= (_state.TOPBATY) + 170) {
+            _state.setMovement(0);
+        } else if (/*x == _state.bottombatx &&*/ y >= _state.bottombaty) {
+            _state.setMovement(1);
+        }
+    }
 }

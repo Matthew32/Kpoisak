@@ -56,9 +56,37 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             }
 
         };
-        this.setOnTouchListener(gestureListener);
+        //this.setOnTouchListener(gestureListener);
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        final int X = (int) event.getRawX();
+        final int Y = (int) event.getRawY();
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+
+            //get if touch is in the bar of player 1 or 2
+            _thread.setMovement(X, Y);
+            _thread.movePlayer(X);
+
+            return true;
+        }
+
+        if (event.getAction() == MotionEvent.ACTION_MOVE) {
+
+            //move bar x
+            _thread.movePlayer(X);
+            return true;
+
+        }
+        if (event.getAction() == MotionEvent.ACTION_UP) {
+            _thread.setPlayerDisabled();
+        }
+
+        return false;
+
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent msg) {
