@@ -6,4 +6,5 @@
     <string name="actualPoints">Puntacion Actual </string>
     <string name="trys">Vidas </string>
     <string name="high">Game Over Maxima Puntuación: </string>
+    <string name="newrecord">NEW RECORD </string>
 </resources>
