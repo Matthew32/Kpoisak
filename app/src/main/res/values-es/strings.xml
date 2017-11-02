@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KPOISAK</string>
+    <string name="restart">Reiniciar Aplicación </string>
+    <string name="record">Record </string>
+    <string name="actualPoints">Puntacion Actual </string>
+    <string name="trys">Vidas </string>
+    <string name="high">Game Over Maxima Puntuación: </string>
+</resources>

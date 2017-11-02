@@ -9,6 +9,8 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
+import com.matthew.pingballgame.View.features.game.data.Shared;
+
 
 /**
  * Created by Matthew on 29/10/2017.
@@ -31,7 +33,7 @@ public class GameThread extends Thread {
         //get width and height
         int width = displayMetrics.widthPixels;
         int height = displayMetrics.heightPixels;
-        _state = new GameState(width, height, imageWin);
+        _state = new GameState(width, height, imageWin, context);
     }
 
     @Override
@@ -55,9 +57,11 @@ public class GameThread extends Thread {
     public void movePlayer(int x) {
         _state.movementPlayer(x);
     }
-    public void setPlayerDisabled(){
+
+    public void setPlayerDisabled() {
         _state.disablePlayer();
     }
+
     public void setMovement(int x, int y) {
         if (/*x == _state.topBatX &&*/ y <= (_state.TOPBATY) + 170) {
             _state.setMovement(0);

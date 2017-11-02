@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">PingBallGame</string>
-    <string name="restart">Restart</string>
+    <string name="app_name">KPOISAK</string>
+    <string name="restart">Restart </string>
+    <string name="record">High Score </string>
+    <string name="actualPoints">Points </string>
+    <string name="trys">Lifes </string>
+    <string name="high">Game Over HIGH SCORE: </string>
+    <string name="newrecord">NEW RECORD </string>
 </resources>
